@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+
+<div class="container">
+    <h1>Web Design &<br><span>Development</span><br>Course</h1>
+    <p class="par">Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Iusto ipsum consequatur deleniti eius
+        doloribus. <br>Nihil ducimus asperiores dolores alias quas! Velit porro tempore minus culpa saepe eveniet natus?
+    </p>
+    <button class="cn"><a href="#">Join Us</a></button>
+    <div class="form">
+        <h2>Login Here</h2>
+        <div>
+            <form class="for_login" method="POST" action="/">
+                {{ form.hidden_tag() }}
+                {{ wtf.form_field(form.username) }}
+                {{ wtf.form_field(form.password) }}
+                {{ wtf.form_field(form.remember) }}
+                <button type="submit" class="btnn">Login</button>
+                <p class="link">Don't have an account<br>
+                    <a href="/signup">Sign up </a>here
+                </p>
+                <p class="liw">log in with</p>
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+{% endblock body %}
